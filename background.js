@@ -86,7 +86,7 @@ chrome.runtime.onConnectExternal.addListener((port) => {
     Serial.getDevices(onGetDevices);
     console.log('setting up new connection');
     _web_app_port.onMessage.addListener((msg) => {
-        if (msg['sender'] === 'cansat-tracker') {
+        if (msg['sender'] === 'chrome-serial-reader') {
             _web_app_port.postMessage({
                 establishConnection: true,
             });
