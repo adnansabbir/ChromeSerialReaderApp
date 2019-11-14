@@ -1,0 +1,15 @@
+{
+  "name": "Serial Reader",
+  "description": "Read/Write from/to serial port.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["serial", "storage"],
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "externally_connectable": {
+    "matches": ["http://localhost:4200/cansat-tracking"]
+  }
+}
